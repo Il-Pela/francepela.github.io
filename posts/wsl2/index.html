@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Manual installation steps for previous versions of WSL 2 - FrancePela&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="Sources:
+[windows docs](Manual installation steps for previous versions of WSL | Microsoft Learn) Step 1 - Enable the Windows Subsystem for Linux Before installing any Linux distribution on Windows, you must enable the optional &ldquo;Windows Subsystem for Linux&rdquo; feature. Open PowerShell as administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as administrator) and enter this command:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now restart your computer and go to [[#[](https://learn." />
+  <meta
+    name="author"
+    content=""
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://francepela.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://francepela.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://francepela.github.io/theme.png" />
+
+  
+  
+  
+  
+
+  
+
+  
+  <link rel="icon" href="https://francepela.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://francepela.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.108.0">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Manual installation steps for previous versions of WSL 2" />
+<meta property="og:description" content="Sources:
+[windows docs](Manual installation steps for previous versions of WSL | Microsoft Learn) Step 1 - Enable the Windows Subsystem for Linux Before installing any Linux distribution on Windows, you must enable the optional &ldquo;Windows Subsystem for Linux&rdquo; feature. Open PowerShell as administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as administrator) and enter this command:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now restart your computer and go to [[#[](https://learn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francepela.github.io/posts/wsl2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-09T17:44:32+01:00" />
+<meta property="article:modified_time" content="2022-12-09T17:44:32+01:00" />
+
+  
+  <meta itemprop="name" content="Manual installation steps for previous versions of WSL 2">
+<meta itemprop="description" content="Sources:
+[windows docs](Manual installation steps for previous versions of WSL | Microsoft Learn) Step 1 - Enable the Windows Subsystem for Linux Before installing any Linux distribution on Windows, you must enable the optional &ldquo;Windows Subsystem for Linux&rdquo; feature. Open PowerShell as administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as administrator) and enter this command:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now restart your computer and go to [[#[](https://learn."><meta itemprop="datePublished" content="2022-12-09T17:44:32+01:00" />
+<meta itemprop="dateModified" content="2022-12-09T17:44:32+01:00" />
+<meta itemprop="wordCount" content="657">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Manual installation steps for previous versions of WSL 2"/>
+<meta name="twitter:description" content="Sources:
+[windows docs](Manual installation steps for previous versions of WSL | Microsoft Learn) Step 1 - Enable the Windows Subsystem for Linux Before installing any Linux distribution on Windows, you must enable the optional &ldquo;Windows Subsystem for Linux&rdquo; feature. Open PowerShell as administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as administrator) and enter this command:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now restart your computer and go to [[#[](https://learn."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://francepela.github.io/"
+      >FrancePela&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Manual installation steps for previous versions of WSL 2</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Dec 9, 2022</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>Sources:</p>
+<ul>
+<li>[windows docs](<a href="https://learn.microsoft.com/it-it/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">Manual installation steps for previous versions of WSL | Microsoft Learn</a>)</li>
+</ul>
+<h2 id="step-1---enable-the-windows-subsystem-for-linux">Step 1 - Enable the Windows Subsystem for Linux</h2>
+<p>Before installing any Linux distribution on Windows, you must enable the optional &ldquo;Windows Subsystem for Linux&rdquo; feature.
+Open PowerShell as <strong>administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as administrator)</strong> and enter this command:</p>
+<pre tabindex="0"><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre><p>We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now <strong>restart</strong> your computer and go to [[#[](https://learn.microsoft.com/it-it/windows/wsl/install-manual step-6&mdash;install-your-linux-distribution-of-choice)Step 6 - Install your preferred Linux distribution|Step 6 - Install your preferred Linux distribution]]. To upgrade to WSL 2, wait for your computer <strong>to restart</strong> and proceed to the next step.</p>
+<h2 id="step-2---verify-the-requirements-for-running-wsl-2">Step 2 - Verify the requirements for running WSL 2</h2>
+<p>To upgrade to WSL 2, you must be running Windows 10&hellip;</p>
+<ul>
+<li>For x64 systems: <strong>Version 1903</strong> or later, with <strong>build 18362</strong> or later.</li>
+<li>For ARM64 systems: <strong>version 2004</strong> or later, with <strong>build 19041</strong> or later.</li>
+</ul>
+<p>or Windows 11.</p>
+<blockquote>
+<p>[!INFO]
+Builds lower than version 18362 do not support WSL 2. To update your version of Windows, go to the <a href="https://www.microsoft.com/software-download/windows10">Windows Upgrade Assistant</a>.</p>
+</blockquote>
+<p>To check the build version and number, press the <strong>Windows key + R</strong>, type <strong>winver</strong>, and select <strong>OK</strong>. <a href="ms-settings:windowsupdate">Update to the latest version of Windows in the</a> Settings menu.</p>
+<blockquote>
+<p>[!INFO]
+If you are running Windows 10 version 1903 or 1909, open &ldquo;Settings&rdquo; from the Windows menu, go to &ldquo;Update &amp; Security&rdquo; and select &ldquo;Check for Updates&rdquo;. The build number must be 18362.1049+ or 18363.1049+, with the secondary build greater than .1049. More information: <a href="https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/">Support for WSL 2 is available in Windows 10 versions 1903 and 1909</a>.</p>
+</blockquote>
+<h2 id="step-3---enable-virtual-machine-features">Step 3 - Enable virtual machine features</h2>
+<p>Before installing WSL 2, you must enable the optional <strong>Virtual Machine Platform</strong> feature. Your computer <a href="https://learn.microsoft.com/it-it/windows/wsl/troubleshooting#error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed">will require virtualization functionality</a> to use this feature.</p>
+<p>Open PowerShell as <strong>administrator</strong> and run:</p>
+<p>PowerShellCopy</p>
+<pre tabindex="0"><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre><p>To complete the WSL installation and upgrade to WSL 2, <strong>restart</strong> your computer.</p>
+<h2 id="step-4---download-the-linux-kernel-update-package">Step 4 - Download the Linux Kernel Update Package</h2>
+<ol>
+<li>
+<p>Download the latest package:</p>
+<ul>
+<li><a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL 2 Linux Kernel Update Package for x64 Computers</a></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+If you are using an ARM64 computer, download <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi">the ARM64 package</a> instead. If you don&rsquo;t know exactly what type of computer you&rsquo;re using, open Command Prompt or PowerShell and type: . <strong>Warning:</strong> Non-English versions of Windows may need to change the search text, translating the string &ldquo;System Type&rdquo;. You may also need to escape quotation marks for the find command. For example, in German .<code>systeminfo | find &quot;System Type&quot;``systeminfo | find '&quot;Systemtyp&quot;'</code></p>
+</blockquote>
+<ol start="2">
+<li>Run the update package that you downloaded in the previous step. Double-click to run: You will be prompted to set elevated privileges. Select Yes to approve this installation.</li>
+</ol>
+<p>Once the installation is complete, proceed to the next step, which is setting WSL 2 as the default version when installing new Linux distributions. Skip this step if you want new Linux installations to be set to WSL 1.</p>
+<blockquote>
+<p>[!INFO]
+For more information, read the article about <a href="https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004">changes to the WSL2 Linux kernel update</a>, available on <a href="https://aka.ms/cliblog">the Windows command line blog</a>.</p>
+</blockquote>
+<h2 id="step-5---set-wsl-2-as-the-default-version">Step 5 - Set WSL 2 as the default version</h2>
+<p>Open PowerShell and run this command to set WSL 2 as the default version when installing a new Linux distribution:</p>
+<p>PowerShellCopy</p>
+<pre tabindex="0"><code>wsl --set-default-version 2
+</code></pre><h2 id="step-6---install-your-preferred-linux-distribution">Step 6 - Install your preferred Linux distribution</h2>
+<ol>
+<li>
+<p>Open <a href="https://aka.ms/wslstore">Microsoft Store</a> and choose your favorite Linux distributions. <br>
+The following links open the Microsoft Store page for each distribution:</p>
+<ul>
+<li><a href="https://www.microsoft.com/store/apps/9N9TNGVNDL3Q">Ubuntu 18.04 LTS</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu 20.04 LTS</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9PN20MSR04DW">Ubuntu 22.04 LTS</a></li>
+</ul>
+</li>
+<li>
+<p>On the distribution page, click &ldquo;Get.&rdquo;</p>
+</li>
+</ol>
+<p>The first time you start a newly installed Linux distribution, a console window will open and prompt you to wait a few minutes for the files to be unpacked and stored on your PC. All subsequent starts should take less than a second.</p>
+<p>You must then <a href="https://learn.microsoft.com/en-us/windows/wsl/setup/environment#set-up-your-linux-username-and-password">create a user account and password for your new Linux distribution</a>.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://francepela.github.io/">FrancePela&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>
