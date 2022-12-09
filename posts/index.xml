@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on FrancePela&#39;s blog</title>
-    <link>https://francepela.github.io/posts/</link>
+    <link>https://il-pela.github.io/francepela.github.io/posts/</link>
     <description>Recent content in Posts on FrancePela&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Dec 2022 17:44:32 +0100</lastBuildDate><atom:link href="https://francepela.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Dec 2022 17:44:32 +0100</lastBuildDate><atom:link href="https://il-pela.github.io/francepela.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manual installation steps for previous versions of WSL 2</title>
-      <link>https://francepela.github.io/posts/wsl2/</link>
+      <link>https://il-pela.github.io/francepela.github.io/posts/wsl2/</link>
       <pubDate>Fri, 09 Dec 2022 17:44:32 +0100</pubDate>
       
-      <guid>https://francepela.github.io/posts/wsl2/</guid>
+      <guid>https://il-pela.github.io/francepela.github.io/posts/wsl2/</guid>
       <description>Sources:
 [windows docs](Manual installation steps for previous versions of WSL | Microsoft Learn) Step 1 - Enable the Windows Subsystem for Linux Before installing any Linux distribution on Windows, you must enable the optional &amp;ldquo;Windows Subsystem for Linux&amp;rdquo; feature. Open PowerShell as administrator (Start menu &amp;gt; PowerShell &amp;gt; right-click &amp;gt; Run as administrator) and enter this command:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart We recommend that you proceed to step 2, Upgrade to WSL 2, but if you want to install only WSL 1, you can now restart your computer and go to [[#[](https://learn.</description>
